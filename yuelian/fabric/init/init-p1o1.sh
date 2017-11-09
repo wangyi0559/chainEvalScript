@@ -13,6 +13,7 @@ function register(){
     -d registry.cn-hangzhou.aliyuncs.com/wangyi0559/eval-init curl 127.0.0.1:8080/api/users
 }
 #检查镜像是否存在
-checkEvalInit
+checkEvalInit >/dev/null 2>&1
 #注册SDK，每个节点都需要
-register 
+register >/dev/null 2>&1
+echo "success"
