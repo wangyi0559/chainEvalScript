@@ -1,0 +1,170 @@
+{
+    "host":"localhost",
+    "port":"8080",
+ 
+    "channelName":"mychannel",
+    "channelConfigPath":"../artifacts/channel/mychannel.tx",
+ 
+    "chaincodeName":"mycc",
+    "chaincodePath":"github.com/example_cc",
+    "chaincodeVersion":"v0",
+ 
+    "instantiateFunctionName":"init",
+    "instantiateArgs":["a","100","b","200"],
+ 
+    "invokeFunctionName":"move",
+    "invokeArgs":["a","b","10"],
+ 
+    "GOPATH":"../artifacts",
+    "keyValueStore":"/tmp/fabric-client-kvs",
+    "eventWaitTime":"30000",
+    "users":[
+       {
+          "username":"admin",
+          "secret":"adminpw"
+       }
+    ],
+ 
+    "orderer":"grpcs://IP_ORDERER:7050",
+    "username":"THISUSER",
+    "orgname":"org1",
+    "peers":["IP_P0O1:7051","IP_P1O1:7051","IP_P2O1:7051","IP_P3O1:7051","IP_P4O1:7051","IP_P5O1:7051","IP_P6O1:7051","IP_P7O1:7051","IP_P8O1:7051","IP_P9O1:7051","IP_P10O1:7051","IP_P11O1:7051","IP_P12O1:7051","IP_P13O1:7051","IP_P14O1:7051","IP_P15O1:7051","IP_P16O1:7051","IP_P17O1:7051","IP_P18O1:7051","IP_P19O1:7051"],
+    "peer":"THISPEER",
+ 
+    "network-config": {
+     "orderer": {
+         "url": "grpcs://IP_ORDERER:7050",
+         "server-hostname": "orderer.example.com",
+         "tls_cacerts": "../artifacts/channel/crypto-config/ordererOrganizations/example.com/orderers/orderer.example.com/tls/ca.crt"
+     },
+     "org1": {
+        "name": "peerOrg1",
+        "mspid": "Org1MSP",
+        "ca": "https://IP_CA1:7054",
+        "peer1": {
+            "requests": "grpcs://IP_P0O1:7051",
+            "events": "grpcs://IP_P0O1:7053",
+            "server-hostname": "peer0.org1.example.com",
+            "tls_cacerts": "../artifacts/channel/crypto-config/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt"
+        },
+        "peer2": {
+            "requests": "grpcs://IP_P1O1:7051",
+            "events": "grpcs://IP_P1O1:7053",
+            "server-hostname": "peer1.org1.example.com",
+            "tls_cacerts": "../artifacts/channel/crypto-config/peerOrganizations/org1.example.com/peers/peer1.org1.example.com/tls/ca.crt"
+        },
+        "peer3": {
+            "requests": "grpcs://IP_P2O1:7051",
+            "events": "grpcs://IP_P2O1:7053",
+            "server-hostname": "peer2.org1.example.com",
+            "tls_cacerts": "../artifacts/channel/crypto-config/peerOrganizations/org1.example.com/peers/peer2.org1.example.com/tls/ca.crt"
+        },
+        "peer4": {
+            "requests": "grpcs://IP_P3O1:7051",
+            "events": "grpcs://IP_P3O1:7053",
+            "server-hostname": "peer3.org1.example.com",
+            "tls_cacerts": "../artifacts/channel/crypto-config/peerOrganizations/org1.example.com/peers/peer3.org1.example.com/tls/ca.crt"
+        },
+        "peer5": {
+            "requests": "grpcs://IP_P4O1:7051",
+            "events": "grpcs://IP_P4O1:7053",
+            "server-hostname": "peer4.org1.example.com",
+            "tls_cacerts": "../artifacts/channel/crypto-config/peerOrganizations/org1.example.com/peers/peer4.org1.example.com/tls/ca.crt"
+        },
+        "peer6": {
+            "requests": "grpcs://IP_P5O1:7051",
+            "events": "grpcs://IP_P5O1:7053",
+            "server-hostname": "peer5.org1.example.com",
+            "tls_cacerts": "../artifacts/channel/crypto-config/peerOrganizations/org1.example.com/peers/peer5.org1.example.com/tls/ca.crt"
+        },
+        "peer7": {
+            "requests": "grpcs://IP_P6O1:7051",
+            "events": "grpcs://IP_P6O1:7053",
+            "server-hostname": "peer6.org1.example.com",
+            "tls_cacerts": "../artifacts/channel/crypto-config/peerOrganizations/org1.example.com/peers/peer6.org1.example.com/tls/ca.crt"
+        },
+        "peer8": {
+            "requests": "grpcs://IP_P7O1:7051",
+            "events": "grpcs://IP_P7O1:7053",
+            "server-hostname": "peer7.org1.example.com",
+            "tls_cacerts": "../artifacts/channel/crypto-config/peerOrganizations/org1.example.com/peers/peer7.org1.example.com/tls/ca.crt"
+        },
+        "peer9": {
+            "requests": "grpcs://IP_P8O1:7051",
+            "events": "grpcs://IP_P8O1:7053",
+            "server-hostname": "peer8.org1.example.com",
+            "tls_cacerts": "../artifacts/channel/crypto-config/peerOrganizations/org1.example.com/peers/peer8.org1.example.com/tls/ca.crt"
+        },
+        "peer10": {
+            "requests": "grpcs://IP_P9O1:7051",
+            "events": "grpcs://IP_P9O1:7053",
+            "server-hostname": "peer9.org1.example.com",
+            "tls_cacerts": "../artifacts/channel/crypto-config/peerOrganizations/org1.example.com/peers/peer9.org1.example.com/tls/ca.crt"
+        },
+        "peer11": {
+            "requests": "grpcs://IP_P10O1:7051",
+            "events": "grpcs://IP_P10O1:7053",
+            "server-hostname": "peer10.org1.example.com",
+            "tls_cacerts": "../artifacts/channel/crypto-config/peerOrganizations/org1.example.com/peers/peer10.org1.example.com/tls/ca.crt"
+        },
+        "peer12": {
+            "requests": "grpcs://IP_P11O1:7051",
+            "events": "grpcs://IP_P11O1:7053",
+            "server-hostname": "peer11.org1.example.com",
+            "tls_cacerts": "../artifacts/channel/crypto-config/peerOrganizations/org1.example.com/peers/peer11.org1.example.com/tls/ca.crt"
+        },
+        "peer13": {
+            "requests": "grpcs://IP_P12O1:7051",
+            "events": "grpcs://IP_P12O1:7053",
+            "server-hostname": "peer12.org1.example.com",
+            "tls_cacerts": "../artifacts/channel/crypto-config/peerOrganizations/org1.example.com/peers/peer12.org1.example.com/tls/ca.crt"
+        },
+        "peer14": {
+            "requests": "grpcs://IP_P13O1:7051",
+            "events": "grpcs://IP_P13O1:7053",
+            "server-hostname": "peer13.org1.example.com",
+            "tls_cacerts": "../artifacts/channel/crypto-config/peerOrganizations/org1.example.com/peers/peer13.org1.example.com/tls/ca.crt"
+        },
+        "peer15": {
+            "requests": "grpcs://IP_P14O1:7051",
+            "events": "grpcs://IP_P14O1:7053",
+            "server-hostname": "peer14.org1.example.com",
+            "tls_cacerts": "../artifacts/channel/crypto-config/peerOrganizations/org1.example.com/peers/peer14.org1.example.com/tls/ca.crt"
+        },
+        "peer16": {
+            "requests": "grpcs://IP_P15O1:7051",
+            "events": "grpcs://IP_P15O1:7053",
+            "server-hostname": "peer15.org1.example.com",
+            "tls_cacerts": "../artifacts/channel/crypto-config/peerOrganizations/org1.example.com/peers/peer15.org1.example.com/tls/ca.crt"
+        },
+        "peer17": {
+            "requests": "grpcs://IP_P16O1:7051",
+            "events": "grpcs://IP_P16O1:7053",
+            "server-hostname": "peer16.org1.example.com",
+            "tls_cacerts": "../artifacts/channel/crypto-config/peerOrganizations/org1.example.com/peers/peer16.org1.example.com/tls/ca.crt"
+        },
+        "peer18": {
+            "requests": "grpcs://IP_P17O1:7051",
+            "events": "grpcs://IP_P17O1:7053",
+            "server-hostname": "peer17.org1.example.com",
+            "tls_cacerts": "../artifacts/channel/crypto-config/peerOrganizations/org1.example.com/peers/peer17.org1.example.com/tls/ca.crt"
+        },
+        "peer19": {
+            "requests": "grpcs://IP_P18O1:7051",
+            "events": "grpcs://IP_P18O1:7053",
+            "server-hostname": "peer18.org1.example.com",
+            "tls_cacerts": "../artifacts/channel/crypto-config/peerOrganizations/org1.example.com/peers/peer18.org1.example.com/tls/ca.crt"
+        },
+        "peer20": {
+            "requests": "grpcs://IP_P19O1:7051",
+            "events": "grpcs://IP_P19O1:7053",
+            "server-hostname": "peer19.org1.example.com",
+            "tls_cacerts": "../artifacts/channel/crypto-config/peerOrganizations/org1.example.com/peers/peer19.org1.example.com/tls/ca.crt"
+        },
+        "admin": {
+            "key": "../artifacts/channel/crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/keystore",
+            "cert": "../artifacts/channel/crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/signcerts"
+        }
+     }
+    }
+} 
