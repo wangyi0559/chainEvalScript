@@ -57,7 +57,7 @@ function initZabbix(){
 function getEvalExample(){
     #安装git
     apt-get update >/dev/null 2>&1
-    apt-get install -y -qq git tcpdump>/dev/null 2>&1
+    apt-get install -y -qq git tcpdump >/dev/null 2>&1
     #git克隆工程
     cd /chain
     git clone https://github.com/wangyi0559/chainEvalScript.git >/dev/null 2>&1
