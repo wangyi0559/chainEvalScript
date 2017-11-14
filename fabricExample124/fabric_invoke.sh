@@ -6,7 +6,7 @@ b=$(( $NUM1MINUTE % 10 ))
 for((i=1;i<=$a;i++));
 do
 curl -s -X GET 127.0.0.1:8080/api/invokeCC?num=10
-sleep 1s
+sleep 5s
 done
 if [ $b != "0" ]
 then
