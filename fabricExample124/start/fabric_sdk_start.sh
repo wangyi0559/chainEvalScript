@@ -14,6 +14,7 @@ function startSDK(){
             docker rm -f $CONTAINER_ID >/dev/null 2>&1
         fi   
     docker run -d \
+    --restart=always \
 	-v /chain/channel/:/home/Service/test/artifacts/channel/ \
 	-v /chain/config.json:/home/Service/test/config.json \
 	--network=host \

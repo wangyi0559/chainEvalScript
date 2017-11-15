@@ -24,6 +24,7 @@ function startCA1(){
             docker rm -f $CONTAINER_ID >/dev/null 2>&1
         fi      
     docker run -d \
+    --restart=always \
 	-e FABRIC_CA_HOME=/etc/hyperledger/fabric-ca-server \
 	-e FABRIC_CA_SERVER_CA_CERTFILE=/etc/hyperledger/fabric-ca-server-config/ca.org1.example.com-cert.pem \
 	-e FABRIC_CA_SERVER_CA_KEYFILE=/etc/hyperledger/fabric-ca-server-config/0e729224e8b3f31784c8a93c5b8ef6f4c1c91d9e6e577c45c33163609fe40011_sk \

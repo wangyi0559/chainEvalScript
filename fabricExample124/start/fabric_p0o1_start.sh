@@ -37,6 +37,7 @@ function startP0O1(){
             docker rm -f $CONTAINER_ID >/dev/null 2>&1
         fi    
     docker run -d \
+	--restart=always \
 	-e CORE_VM_ENDPOINT=unix:///host/var/run/docker.sock \
 	-e CORE_VM_DOCKER_HOSTCONFIG_NETWORKMODE=artifacts_default \
    	-e CORE_PEER_GOSSIP_USELEADERELECTION=true \

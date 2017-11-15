@@ -21,6 +21,7 @@ function startOrder(){
             docker rm -f $CONTAINER_ID >/dev/null 2>&1
         fi    
     docker run -d --name orderer.example.com \
+	--restart=always \
 	-e ORDERER_GENERAL_LISTENADDRESS=0.0.0.0 \
 	-e ORDERER_GENERAL_GENESISMETHOD=file \
 	-e ORDERER_GENERAL_GENESISFILE=/etc/hyperledger/configtx/genesis.block \

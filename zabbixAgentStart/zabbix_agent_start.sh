@@ -31,6 +31,7 @@ function startZabbixAgent(){
     checkZabbixAgent
     stopZabbixAgent
     docker run --privileged=true \
+    --restart=always \
     --name zabbix-agent \
     --network=host \
     -e ZBX_HOSTNAME=$AGENT_IP \
