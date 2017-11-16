@@ -45,7 +45,7 @@ function startPeer(){
 	-e CORE_PEER_GOSSIP_SKIPHANDSHAKE=true \
 	-e CORE_PEER_MSPCONFIGPATH=/etc/hyperledger/crypto/peer/msp \
 	-e CORE_PEER_TLS_ENABLED=true \
-	-e CORE_LOGGING_LEVEL=CRITICAL \
+	-e CORE_LOGGING_LEVEL=DEBUG \
 	-e CORE_PEER_TLS_KEY_FILE=/etc/hyperledger/crypto/peer/tls/server.key \
 	-e CORE_PEER_TLS_CERT_FILE=/etc/hyperledger/crypto/peer/tls/server.crt \
 	-e CORE_PEER_TLS_ROOTCERT_FILE=/etc/hyperledger/crypto/peer/tls/ca.crt \

@@ -32,7 +32,7 @@ function startOrder(){
 	-e ORDERER_GENERAL_TLS_CERTIFICATE=/etc/hyperledger/crypto/orderer/tls/server.crt \
 	-e ORDERER_GENERAL_TLS_ROOTCAS=[/etc/hyperledger/crypto/orderer/tls/ca.crt,/etc/hyperledger/crypto/peerOrg1/tls/ca.crt,/etc/hyperledger/crypto/peerOrg2/tls/ca.crt] \
 	-p 7050:7050 \
-	-e CORE_LOGGING_LEVEL=DEBUG \
+	-e ORDERER_GENERAL_LOGLEVEL=DEBUG \
     --network=artifacts_default \
 	--privileged=true \
 	-v /chain/channel:/etc/hyperledger/configtx \
