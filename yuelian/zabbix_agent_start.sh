@@ -106,6 +106,13 @@ function configEvalScript(){
     #/chain/ChangeStatus.sh
     mv /chain/chainEvalScript/yuelian/ChangeStatus.sh /chain/ChangeStatus.sh
     cp /chain/ChangeStatus.sh /chain/ChangeStatusTaskCommand.sh
+    #/chain/DisConnection.sh
+    mv /chain/chainEvalScript/yuelian/DisConnection.sh /chain/DisConnection.sh
+    cp /chain/DisConnection.sh /chain/DisConnectionTaskCommand.sh
+    #/chain/AssConnection.sh
+    mv /chain/chainEvalScript/yuelian/AssConnection.sh /chain/AssConnection.sh
+    cp /chain/AssConnection.sh /chain/AssConnectionTaskCommand.sh
+}
 }
 
 sleep 2s
