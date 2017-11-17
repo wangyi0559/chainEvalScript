@@ -91,47 +91,28 @@ function getEvalExample(){
 }
 function configEvalScript(){
     #/chain/Create.sh
-    echo '#!/bin/bash' > /chain/Create.sh
-    echo 'STATUS=$(cat /status)' >> /chain/Create.sh
-    echo 'if [ $STATUS == "0" ]' >> /chain/Create.sh
-    echo 'then' >> /chain/Create.sh
-    echo '/bin/bash /chain/chainEvalScript/fabricExample124/fabric_start.sh $* >/dev/null 2>&1' >> /chain/Create.sh
-    echo 'echo 1 > /status' >> /chain/Create.sh
-    echo 'echo "success"' >> /chain/Create.sh
-    echo 'else' >> /chain/Create.sh
-    echo 'echo "error"' >> /chain/Create.sh
-    echo 'fi' >> /chain/Create.sh
+    mv /chain/chainEvalScript/fabricExample124/Create.sh /chain/Create.sh
     cp /chain/Create.sh /chain/CreateTaskCommand.sh
+
     #/chain/Init.sh
-    echo '#!/bin/bash' > /chain/Init.sh
-    echo 'STATUS=$(cat /status)' >> /chain/Init.sh
-    echo 'if [ $STATUS == "1" ]' >> /chain/Init.sh
-    echo 'then' >> /chain/Init.sh
-    echo '/bin/bash /chain/chainEvalScript/fabricExample124/fabric_init.sh >/dev/null 2>&1' >> /chain/Init.sh
-    echo 'echo 2 > /status' >> /chain/Init.sh
-    echo 'echo "success"' >> /chain/Init.sh
-    echo 'else' >> /chain/Init.sh
-    echo 'echo "error"' >> /chain/Init.sh
-    echo 'fi' >> /chain/Init.sh
+    mv /chain/chainEvalScript/fabricExample124/Init.sh /chain/Init.sh
     cp /chain/Init.sh /chain/InitTaskCommand.sh
+
     #/chain/SendTransaction.sh
-    echo '#!/bin/bash' > /chain/SendTransaction.sh
-    echo 'STATUS=$(cat /status)' >> /chain/SendTransaction.sh
-    echo 'if [ $STATUS == "2" ]' >> /chain/SendTransaction.sh
-    echo 'then' >> /chain/SendTransaction.sh
-    echo 'echo 3 > /status' >> /chain/SendTransaction.sh
-    echo '/bin/bash /chain/chainEvalScript/fabricExample124/fabric_invoke.sh $* >/dev/null 2>&1' >> /chain/SendTransaction.sh
-    echo 'echo 4 > /status' >> /chain/SendTransaction.sh
-    echo 'echo "success"' >> /chain/SendTransaction.sh
-    echo 'else' >> /chain/SendTransaction.sh
-    echo 'echo "error"' >> /chain/SendTransaction.sh
-    echo 'fi' >> /chain/SendTransaction.sh
+    mv /chain/chainEvalScript/fabricExample124/SendTransaction.sh /chain/SendTransaction.sh
     cp /chain/SendTransaction.sh /chain/SendTransactionTaskCommand.sh
+
     #/chain/ChangeStatus.sh
-    echo '#!/bin/bash' > /chain/ChangeStatus.sh
-    echo 'echo $1 > /status' >> /chain/ChangeStatus.sh
-    echo 'echo $1' >> /chain/ChangeStatus.sh 
+    mv /chain/chainEvalScript/fabricExample124/ChangeStatus.sh /chain/ChangeStatus.sh
     cp /chain/ChangeStatus.sh /chain/ChangeStatusTaskCommand.sh
+
+    #/chain/DisConnection.sh
+    mv /chain/chainEvalScript/fabricExample124/DisConnection.sh /chain/DisConnection.sh
+    cp /chain/DisConnection.sh /chain/DisConnectionTaskCommand.sh
+
+    #/chain/AssConnection.sh
+    mv /chain/chainEvalScript/fabricExample124/AssConnection.sh /chain/AssConnection.sh
+    cp /chain/AssConnection.sh /chain/AssConnectionTaskCommand.sh
 }
 function startNetItem(){
     ETH_ID=$(ifconfig -s | awk '{print $1}' | grep "^e")
