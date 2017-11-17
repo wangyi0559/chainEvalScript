@@ -22,11 +22,6 @@ function joinchannel(){
     --network=host \
     -d registry.cn-hangzhou.aliyuncs.com/wangyi0559/eval-init curl 127.0.0.1:8080/api/joinchannel 
 }
-function installChaincode(){
-    docker run --rm --privileged=true \
-    --network=host \
-    -d registry.cn-hangzhou.aliyuncs.com/wangyi0559/eval-init curl 127.0.0.1:8080/api/installChaincode 
-}
 #检查镜像是否存在
 checkEvalInit >/dev/null 2>&1
 #注册SDK，每个节点都需要
@@ -37,7 +32,4 @@ createChannel >/dev/null 2>&1
 sleep 5s
 #加入通道，每个组织执行一次
 joinchannel >/dev/null 2>&1
-sleep 5s
-#安装合约，每个组织执行一次
-installChaincode >/dev/null 2>&1
 echo "success"
