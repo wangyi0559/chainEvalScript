@@ -113,7 +113,6 @@ function configEvalScript(){
     mv /chain/chainEvalScript/yuelian/AssConnection.sh /chain/AssConnection.sh
     cp /chain/AssConnection.sh /chain/AssConnectionTaskCommand.sh
 }
-}
 
 sleep 2s
 #获取及配置区块链
