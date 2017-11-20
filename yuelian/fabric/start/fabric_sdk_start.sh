@@ -17,6 +17,7 @@ function startSDK(){
 	-v /chain/channel/:/home/Service/test/artifacts/channel/ \
 	-v /chain/config.json:/home/Service/test/config.json \
 	--network=host \
+    --restart=always \
 	--name fabric-sdk registry.cn-hangzhou.aliyuncs.com/wangyi0559/eval:latest 
 }
 startSDK >/dev/null 2>&1

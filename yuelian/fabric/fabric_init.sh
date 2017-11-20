@@ -26,7 +26,7 @@ function initFabric(){
         }
         ;;
         6)  {
-            sleep 20s
+            sleep 30s
             sleep $PEER_INDEX
             /bin/bash /chain/chainEvalScript/yuelian/fabric/init/init-p1o1.sh
             sleep 20s
