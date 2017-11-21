@@ -30,7 +30,7 @@ function startNetItem(){
 #启动并初始化zabbix-agent
 function startZabbixAgent(){
     #下载最新zabbix-agent、agent初始化镜像
-    docker pull registry.cn-hangzhou.aliyuncs.com/wangyi0559/zabbix-agent:1-1-4 
+    docker pull registry.cn-hangzhou.aliyuncs.com/wangyi0559/zabbix-agent:latest
     docker pull registry.cn-hangzhou.aliyuncs.com/wangyi0559/eval-init 
     #关掉已存在zabbix-agent容器
     CONTAINER_ID=$(docker ps -a | grep "zabbix-agent" | awk '{print $1}')
@@ -50,7 +50,7 @@ function startZabbixAgent(){
     -v /chain:/chain \
     -v /var/run/docker.sock:/var/run/docker.sock \
     -v /var/lib/docker:/var/lib/docker \
-    -d registry.cn-hangzhou.aliyuncs.com/wangyi0559/zabbix-agent:1-1-4 
+    -d registry.cn-hangzhou.aliyuncs.com/wangyi0559/zabbix-agent:latest
     #暂停10s
     sleep 10s
     #初始化agent
