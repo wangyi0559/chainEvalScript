@@ -41,3 +41,6 @@ function startCA2(){
 	sh -c 'fabric-ca-server start -b admin:adminpw -d' >/dev/null 2>&1
 }
 startCA2
+sleep 2s
+echo "ca_peerOrg2" > /chain/CONTAINER_NAME
+docker ps -a | grep "ca_peerOrg2" | awk '{print $1}' > /chain/CONTAINER_ID

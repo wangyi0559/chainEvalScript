@@ -66,3 +66,6 @@ function startP0O2(){
 startP0O2
 sleep 10s
 /bin/bash /chain/chainEvalScript/fabricExample124/start/fabric_sdk_start.sh >/dev/null 2>&1
+sleep 2s
+echo "peer0.org2.example.com" > /chain/CONTAINER_NAME
+docker ps -a | grep " peer0.org2.example.com" | awk '{print $1}' > /chain/CONTAINER_ID
