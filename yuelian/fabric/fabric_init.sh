@@ -12,16 +12,20 @@ function initFabric(){
             sleep 10s
         }
         ;;
-        4|5)  {
+        4)  {
             sleep 30s
-            sleep $PEER_INDEX
+            curl 127.0.0.1:8080/api/users
+            sleep 10s
+        }
+        ;;
+        5)  {
+            sleep 35s
             curl 127.0.0.1:8080/api/users
             sleep 10s
         }
         ;;
         6)  {
             sleep 40s
-            sleep $PEER_INDEX
             curl 127.0.0.1:8080/api/users
             sleep 5s
             curl 127.0.0.1:8080/api/installChaincode 
