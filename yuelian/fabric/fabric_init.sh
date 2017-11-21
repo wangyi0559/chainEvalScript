@@ -27,7 +27,7 @@ function initFabric(){
         6)  {
             sleep 40s
             curl 127.0.0.1:8080/api/users
-            sleep 30s
+            sleep 50s
             curl 127.0.0.1:8080/api/installChaincode 
             sleep 10s
             curl 127.0.0.1:8080/api/instantiateChaincode 
