@@ -22,10 +22,10 @@ function startCA1(){
     docker run -d \
 	-e FABRIC_CA_HOME=/etc/hyperledger/fabric-ca-server \
 	-e FABRIC_CA_SERVER_CA_CERTFILE=/etc/hyperledger/fabric-ca-server-config/ca.org1.example.com-cert.pem \
-	-e FABRIC_CA_SERVER_CA_KEYFILE=/etc/hyperledger/fabric-ca-server-config/9afe5c9a751887d36135efd84599bd9950fe872a5ee709c7a2e552d1eeb25b11_sk \
+	-e FABRIC_CA_SERVER_CA_KEYFILE=/etc/hyperledger/fabric-ca-server-config/4b1c13ba5204b268baf2729762baf410310081d2685c2013c8daec28cec275b5_sk \
 	-e FABRIC_CA_SERVER_TLS_ENABLED=true \
 	-e FABRIC_CA_SERVER_TLS_CERTFILE=/etc/hyperledger/fabric-ca-server-config/ca.org1.example.com-cert.pem \
-	-e FABRIC_CA_SERVER_TLS_KEYFILE=/etc/hyperledger/fabric-ca-server-config/9afe5c9a751887d36135efd84599bd9950fe872a5ee709c7a2e552d1eeb25b11_sk \
+	-e FABRIC_CA_SERVER_TLS_KEYFILE=/etc/hyperledger/fabric-ca-server-config/4b1c13ba5204b268baf2729762baf410310081d2685c2013c8daec28cec275b5_sk \
 	-p 7054:7054 \
     -e CORE_LOGGING_LEVEL=DEBUG \
     --network=artifacts_default \
