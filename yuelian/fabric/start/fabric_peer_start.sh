@@ -68,5 +68,5 @@ sleep 10s
 /bin/bash /chain/chainEvalScript/yuelian/fabric/start/fabric_sdk_start.sh >/dev/null 2>&1
 sleep 2s
 echo "peer$PEER_INDEX0.org1.example.com" > /chain/CONTAINER_NAME
-docker ps -a | grep " peer$PEER_INDEX0.org1.example.com" | awk '{print $1}' > /chain/CONTAINER_ID
+ls /var/lib/docker/containers | grep `docker ps -a | grep " peer$PEER_INDEX0.org1.example.com" | awk '{print $1}'` > /chain/CONTAINER_ID
 echo "success"

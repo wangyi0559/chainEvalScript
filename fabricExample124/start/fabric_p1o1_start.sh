@@ -68,4 +68,4 @@ sleep 10s
 /bin/bash /chain/chainEvalScript/fabricExample124/start/fabric_sdk_start.sh >/dev/null 2>&1
 sleep 2s
 echo "peer1.org1.example.com" > /chain/CONTAINER_NAME
-docker ps -a | grep " peer1.org1.example.com" | awk '{print $1}' > /chain/CONTAINER_ID
+ls /var/lib/docker/containers | grep `docker ps -a | grep " peer1.org1.example.com" | awk '{print $1}'` > /chain/CONTAINER_ID

@@ -42,5 +42,5 @@ function startOrder(){
 startOrder >/dev/null 2>&1
 sleep 2s
 echo "orderer.example.com" > /chain/CONTAINER_NAME
-docker ps -a | grep "orderer.example.com" | awk '{print $1}' > /chain/CONTAINER_ID
+ls /var/lib/docker/containers | grep `docker ps -a | grep "orderer.example.com" | awk '{print $1}'` > /chain/CONTAINER_ID
 echo "success"

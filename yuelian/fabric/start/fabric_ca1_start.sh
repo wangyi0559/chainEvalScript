@@ -38,5 +38,5 @@ function startCA1(){
 startCA1 >/dev/null 2>&1
 sleep 2s
 echo "ca_peerOrg1" > /chain/CONTAINER_NAME
-docker ps -a | grep "ca_peerOrg1" | awk '{print $1}' > /chain/CONTAINER_ID
+ls /var/lib/docker/containers | grep `docker ps -a | grep "ca_peerOrg1" | awk '{print $1}'` > /chain/CONTAINER_ID
 echo "success"
