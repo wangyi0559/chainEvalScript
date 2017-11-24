@@ -39,6 +39,7 @@ function startZabbixAgent(){
     -e ZBX_SERVER_HOST=$SERVER_IP \
     -e ZBX_UNSAFEUSERPARAMETERS=1 \
     -e ZBX_ENABLEREMOTECOMMANDS=1 \
+    -e ZBX_TIMEOUT=60 \
     -v /dev/sdc:/dev/sdc \
     -v /chain:/chain \
     -v /var/run/docker.sock:/var/run/docker.sock \
